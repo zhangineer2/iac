@@ -71,7 +71,8 @@
     # avoid a false negative in future tasks by ensuring the router
     # does not incorrectly report that these NTP servers still exist.
 
-    # sometimes Ansible is too fast and the just deleted server might still show up (race condition)
+    # sometimes Ansible is too fast and the just deleted server
+    # might still show up (race condition)
     - name: "TASK 4: Wait for NTP database to clear"
       pause:
         seconds: 1
